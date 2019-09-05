@@ -1,0 +1,5 @@
+  <%= radio_button @f, :radio, "All", checked: @filters["radio"] in ["All", nil] %>
+    All
+      
+  <%= radio_button @f, :radio, "None", checked: @filters["radio"] == "None" %>
+    None

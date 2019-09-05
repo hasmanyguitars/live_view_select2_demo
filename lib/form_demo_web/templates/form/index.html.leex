@@ -1,0 +1,11 @@
+<%= f = form_for :filters, "#", phx_change: "filters_changed" %>
+<%= select f, :template, ["template_1", "template_2"], prompt: "Choose Template", selected: @filters["template"], phx_hook: "SelectorHook" %><br/>
+
+<%= "template: #{@filters["template"]}" %><br/>
+
+<%= render "radio.html", Map.put(assigns, :f, f) %>
+<br/>
+
+<%= "Radio value: #{@filters["radio"] || "nil"}" %><br/>
+
+</form>
