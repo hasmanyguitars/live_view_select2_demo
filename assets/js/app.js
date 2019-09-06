@@ -34,7 +34,7 @@ const Hooks = {
         minimumResultsForSearch: Infinity,
         templateResult: self.formatSelect
       }).off("select2:select").on("select2:select", function(e) {
-        self.pushEvent("filters_changed", {"filters": {"template": e.params.data.id}})
+        self.pushEvent("select_changed", {"filters": {"template": e.params.data.id}})
       });
     },
 
